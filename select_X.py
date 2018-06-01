@@ -46,5 +46,5 @@ for a in tileList:
 	high = a * amnt
 	queryString = "\"ID\" > " + str(low) + " AND \"ID\" <= " + str(high)
 	print queryString
-	arcpy.Select_analimport ysis(inputFile, outName, queryString)
+	arcpy.Select_analysis(inputFile, outName, queryString)
 
