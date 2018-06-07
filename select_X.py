@@ -19,14 +19,14 @@ import arcpy
 
 
 # The input file and location
-inputFile = "E:/Cobus/NEW_DEVELOPMENTS/vectors/file_diff.shp"
+inputFile = arcpy.GetParameterAsText(0)
 
 #determine the amount of polys in the input shp file
 count = arcpy.GetCount_management(inputFile)
 val = int(count.getOutput(0))
 
 # the max amount of polys that each sub section can contain
-amnt = 250000
+amnt = int(arcpy.GetParameter(1))
 
 # determine amount of subsections for the input shp file
 if val > 0 :
